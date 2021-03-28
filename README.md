@@ -10,3 +10,18 @@ Node.from(`
 # This is a markdown string
 `)
 ```
+
+Result: (converted to plain JSON)
+
+```json
+{
+  "children": [
+    {
+      "props": { "type": "heading", "level": 1 },
+      "children": [
+        { "props": { "type": "text", "content": "This is a markdown string" } }
+      ]
+    }
+  ]
+}
+```
