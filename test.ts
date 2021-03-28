@@ -3,7 +3,7 @@ import { assertEquals } from 'https://deno.land/std/testing/asserts.ts'
 
 Deno.test(`It works`, () => {
   const root = Node.from(`
-#Asdf
+# Asdf
 
 asdsaf\`asdf\`asdf[^1]
 [x] asd
@@ -14,9 +14,9 @@ asdsaf\`asdf\`asdf[^1]
   const tree = {
     children: [
       {
-        props: { type: 'paragraph' },
+        props: { type: 'heading' },
         children: [
-          { props: { type: 'text', content: '#Asdf' } },
+          { props: { type: 'text', content: 'Asdf' } },
           {
             props: { type: 'paragraph' },
             children: [
