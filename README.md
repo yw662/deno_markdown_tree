@@ -1,6 +1,6 @@
 # markdown-tree
 
-This is a markdown to JSON tree converter for deno, based on rusty_markdown
+This is a markdown to JSON tree converter for deno, based on [rusty_markdown](https://deno.land/x/rusty_markdown)
 
 ## Example
 
