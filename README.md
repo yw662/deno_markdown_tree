@@ -7,7 +7,10 @@ This is a markdown to JSON tree converter for deno, based on [rusty_markdown](ht
 ```ts
 import { Node } from './mod.ts'
 Node.from(`
-# This is a markdown string
+# Foo
+bar
+
+baz
 `)
 ```
 
@@ -18,9 +21,15 @@ Result: (converted to plain JSON)
   "children": [
     {
       "props": { "type": "heading", "level": 1 },
-      "children": [
-        { "props": { "type": "text", "content": "This is a markdown string" } }
-      ]
+      "children": [{ "props": { "type": "text", "content": "Foo" } }]
+    },
+    {
+      "props": { "type": "paragraph" },
+      "children": [{ "props": { "type": "text", "content": "bar" } }]
+    },
+    {
+      "props": { "type": "paragraph" },
+      "children": [{ "props": { "type": "text", "content": "baz" } }]
     }
   ]
 }
