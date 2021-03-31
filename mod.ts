@@ -58,6 +58,20 @@ export class Node {
         return { tag: `h${props.level}`, closing: false }
       } else if (props.type === 'paragraph') {
         return { tag: `p`, closing: false }
+      } else if (props.type === 'list') {
+        return { tag: props.kind === 'ordered' ? 'ol' : 'ul', closing: false }
+      } else if (props.type === 'listItem') {
+        return { tag: `li`, closing: false }
+      } else if (props.type === 'tableHead') {
+        return { tag: `th`, closing: false }
+      } else if (props.type === 'tableRow') {
+        return { tag: `fr`, closing: false }
+      } else if (props.type === 'tableCell') {
+        return { tag: `td`, closing: false }
+      } else if (props.type === 'link') {
+        return { tag: `a`, attr: { href: props.url }, closing: false }
+      } else if (props.type === 'image') {
+        return { tag: `img`, attr: { src: props.url }, closing: false }
       } else {
         const { type: tag, ...attr } = props
         return { tag, attr, closing: false }
